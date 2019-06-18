@@ -1,0 +1,12 @@
+notifications:
+  email: false
+language: python
+matrix:
+  include:
+    - env: TOXENV=py27
+      python: "2.7"
+    - env: TOXENV=py36
+      python: "3.6"
+
+install: pip install "tox<3"
+script: tox
